@@ -32,10 +32,10 @@ class MoneyResource extends Resource
         return $form
             ->schema([
                 Card::make()->schema([
-                    TextInput::make('symbol')
+                    TextInput::make('name')
                         ->required()
                         ->maxLength(255),
-                    TextInput::make('name')
+                    TextInput::make('symbol')
                         ->required()
                         ->maxLength(255),
                     Select::make('chain_id')
