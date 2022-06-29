@@ -21,4 +21,11 @@ class Chain extends Model  implements HasMedia
     {
         return $this->hasOne(Media::class, 'model_id', 'id')->where('model_type','App\Models\Chain');
     }
+
+
+    public function money()
+    {
+        return $this->hasMany(Money::class, 'id', 'chain_id');
+    }
+
 }

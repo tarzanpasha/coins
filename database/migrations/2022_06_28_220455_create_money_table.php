@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('symbol');
-            $table->foreignId('chain_id')->constrained();
+            $table->unsignedBigInteger('chain_id');
             $table->boolean('is_presale')->nullable()->default(false);
             $table->string('contract_address')->nullable();
             $table->string('presale_link')->nullable();

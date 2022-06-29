@@ -39,9 +39,7 @@ class MoneyResource extends Resource
                         ->required()
                         ->maxLength(255),
                     Select::make('chain_id')
-                        ->label('Район')
                         ->relationship('chain', 'name'),
-
                     SpatieMediaLibraryFileUpload::make('thumbnail')->collection('moneys'),
                     TextInput::make('contract_address')
                         ->maxLength(255),
@@ -49,7 +47,7 @@ class MoneyResource extends Resource
                         ->maxLength(255),
                     Textarea::make('description')
                         ->maxLength(65535),
-                    DatePicker::make('launch_date'),
+                    DatePicker::make('launch_date')->required(),
                     TextInput::make('custom_chart_link')
                         ->maxLength(255),
                     TextInput::make('custom_swap_link')
@@ -71,8 +69,8 @@ class MoneyResource extends Resource
     {
         return $table
             ->columns([
-                SpatieMediaLibraryImageColumn::make('thumbnail')->collection('moneys'),
                 Tables\Columns\TextColumn::make('id'),
+                SpatieMediaLibraryImageColumn::make('thumbnail')->collection('moneys'),
                 Tables\Columns\TextColumn::make('symbol'),
                 Tables\Columns\TextColumn::make('chain.name')->sortable(),
                 Tables\Columns\TextColumn::make('name'),

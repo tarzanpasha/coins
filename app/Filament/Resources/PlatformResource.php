@@ -34,7 +34,7 @@ class PlatformResource extends Resource
                 TextInput::make('name')
                     ->required()
                     ->maxLength(255),
-                SpatieMediaLibraryFileUpload::make('thumbnail')->collection('chains'),
+                SpatieMediaLibraryFileUpload::make('thumbnail')->collection('platforms'),
                 Textarea::make('description')
                     ->maxLength(65535),
             ])
@@ -45,8 +45,8 @@ class PlatformResource extends Resource
     {
         return $table
             ->columns([
-                SpatieMediaLibraryImageColumn::make('thumbnail')->collection('chains'),
                 Tables\Columns\TextColumn::make('id'),
+                SpatieMediaLibraryImageColumn::make('thumbnail')->collection('platforms'),
                 Tables\Columns\TextColumn::make('symbol'),
                 Tables\Columns\TextColumn::make('name'),
                 Tables\Columns\TextColumn::make('created_at')

@@ -38,7 +38,7 @@ class ChainResource extends Resource
                     TextInput::make('name')
                         ->required()
                         ->maxLength(255),
-                    SpatieMediaLibraryFileUpload::make('thumbnail')->collection('chain'),
+                    SpatieMediaLibraryFileUpload::make('thumbnail')->collection('chains'),
                     Textarea::make('description')
                         ->maxLength(65535),
                 ])
@@ -49,10 +49,9 @@ class ChainResource extends Resource
     {
         return $table
             ->columns([
-                SpatieMediaLibraryImageColumn::make('thumbnail')->collection('chains'),
                 TextColumn::make('id'),
+                SpatieMediaLibraryImageColumn::make('thumbnail')->collection('chains'),
                 TextColumn::make('symbol'),
-                TextColumn::make('chain.name')->sortable(),
                 TextColumn::make('name'),
                 TextColumn::make('created_at')
                     ->dateTime(),
