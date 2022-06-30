@@ -11,6 +11,8 @@
                         Get 500 votes to be officially listed on <a href="/">CoinSniper</a>.</p>
 
 
+                    <iframe width=100% height="700" frameBorder="0" scrolling="no" src="https://coinbrain.com/coins/0x14d158df59Cd8ba430F669473C0E50573E58310a/lite?theme=dark&padding=16"></iframe>
+
 
                     <form id="coins-form" action="/submit" method="POST">
                         <input type="hidden" name="_token" value="CW4NQEHlK5QC4XRm4YzKrYJrx5rWr4yebbJT3gdr">

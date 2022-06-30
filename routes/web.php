@@ -15,9 +15,8 @@ use App\Http\Controllers\Coins\MainController;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [MainController::class, 'getResults']);
+
 
 Route::get('/submit', [SubmitCoinController::class, 'create']);
 
@@ -27,6 +26,11 @@ Route::get('/contact', [MainController::class, 'contact']);
 
 Route::get('/terms-and-conditions', [MainController::class, 'termsAndConditions']);
 
+
+Route::get('/set-filters', [MainController::class, 'getResults']);
+
+
+Route::get('/vote/{id}', [MainController::class, 'vote']);
 
 
 Route::get('/dashboard', function () {
