@@ -1,0 +1,19 @@
+{
+    "id": 1,
+    "name": "golddinaR4",
+    "symbol": "IGD",
+    "chain_id": 2,
+    "is_presale": false,
+    "contract_address": "0xa5737662797443888c92970e99bcb25103215fda",
+    "presale_link": null,
+    "description": "ISLAMIC GOLD DINAR\nThe one and only official Islamic token is launching on binance smart chain because BSC is a high-end blockchain infrastructure created by Binance, one of the world leaders in providing blockchain solutions. Binance Smart Chain was designed to fulfill the same purposes as Ethereum \u2013 the ability to launch tokens, smart contracts and decentralized applications \u2013 but with a much better efficiency. While the Ethereum network uses a token format called ERC-20, the BSC blockchain has its original, innovative token format: BEP-20. Tokens utilizing the BEP 20 format can be purchased, sold and transferred with the fees that can be 30-100x lower compared to Ethereum fees. Not only the fees, but also the transaction times of Binance Smart Chain are much lower.",
+    "launch_date": "2022-03-01",
+    "custom_chart_link": "https:\/\/www.dextools.io\/app\/bsc\/pair-explorer\/0x3b2181bb198258259b9256f8c4adc49f41f7e78e",
+    "custom_swap_link": "https:\/\/charts.bogged.finance\/?c=bsc&t=0x3b2181bb198258259b9256f8c4adc49f41f7e78e",
+    "website_link": "https:\/\/golddinar.co.uk\/",
+    "telegram_link": "https:\/\/t.me\/IGDTOKEN",
+    "twitter_link": "https:\/\/twitter.com\/dinar_crypto",
+    "discord_link": null,
+    "created_at": "2022-06-29T13:01:49.000000Z",
+    "updated_at": "2022-06-29T13:46:44.000000Z"
+}

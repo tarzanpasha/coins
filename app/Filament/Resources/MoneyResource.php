@@ -43,6 +43,8 @@ class MoneyResource extends Resource
                     SpatieMediaLibraryFileUpload::make('thumbnail')->collection('moneys'),
                     TextInput::make('contract_address')
                         ->maxLength(255),
+                    TextInput::make('votes')
+                        ->maxLength(255),
                     TextInput::make('presale_link')
                         ->maxLength(255),
                     Textarea::make('description')
@@ -74,6 +76,7 @@ class MoneyResource extends Resource
                 Tables\Columns\TextColumn::make('symbol'),
                 Tables\Columns\TextColumn::make('chain.name')->sortable(),
                 Tables\Columns\TextColumn::make('name'),
+                Tables\Columns\TextColumn::make('votes'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime(),
             ])

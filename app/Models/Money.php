@@ -29,7 +29,8 @@ class Money extends Model   implements HasMedia
         'website_link',
         'telegram_link',
         'twitter_link',
-        'discord_link'
+        'discord_link',
+        'votes'
     ];
 
     protected $casts = [
@@ -49,6 +50,14 @@ class Money extends Model   implements HasMedia
     }
 
 
+    public function getImage($image)
+    {
+        if (!$image) {
+            return '';
+        } else {
+            return   '/storage/'.$image->id.'/'.$image->file_name;
+        }
+    }
 
 
 

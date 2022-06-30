@@ -28,4 +28,23 @@ class Chain extends Model  implements HasMedia
         return $this->hasMany(Money::class, 'id', 'chain_id');
     }
 
+    public function getImage($image)
+    {
+        if (!$image) {
+            return '';
+        } else {
+            return   '/storage/'.$image->id.'/'.$image->file_name;
+        }
+    }
+
+    public function getSymbol($chain)
+    {
+        if (!$chain) {
+            return '';
+        } else {
+            return   $chain->symbol;
+        }
+    }
+
+
 }
