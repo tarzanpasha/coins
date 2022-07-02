@@ -2,11 +2,12 @@
 
 namespace App\Models;
 
+use App\Models\Chain;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
-use App\Models\Chain;
+use App\Models\Platform;
 
 
 class Money extends Model   implements HasMedia
@@ -30,7 +31,8 @@ class Money extends Model   implements HasMedia
         'telegram_link',
         'twitter_link',
         'discord_link',
-        'votes'
+        'votes',
+        'platform_id'
     ];
 
     protected $casts = [
@@ -40,6 +42,11 @@ class Money extends Model   implements HasMedia
     public function chain()
     {
         return $this->belongsTo(Chain::class);
+    }
+
+    public function platform()
+    {
+        return $this->belongsTo(Platform::class);
     }
 
 

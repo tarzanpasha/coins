@@ -40,6 +40,8 @@ class MoneyResource extends Resource
                         ->maxLength(255),
                     Select::make('chain_id')
                         ->relationship('chain', 'name'),
+                    Select::make('platform_id')
+                        ->relationship('platform', 'name'),
                     SpatieMediaLibraryFileUpload::make('thumbnail')->collection('moneys'),
                     TextInput::make('contract_address')
                         ->maxLength(255),
@@ -75,6 +77,7 @@ class MoneyResource extends Resource
                 SpatieMediaLibraryImageColumn::make('thumbnail')->collection('moneys'),
                 Tables\Columns\TextColumn::make('symbol'),
                 Tables\Columns\TextColumn::make('chain.name')->sortable(),
+                Tables\Columns\TextColumn::make('platform.name')->sortable(),
                 Tables\Columns\TextColumn::make('name'),
                 Tables\Columns\TextColumn::make('votes'),
                 Tables\Columns\TextColumn::make('created_at')

@@ -21,4 +21,28 @@ class Platform extends Model   implements HasMedia
     {
         return $this->hasOne(Media::class, 'model_id', 'id')->where('model_type','App\Models\Platform');
     }
+
+    public function money()
+    {
+        return $this->hasMany(Money::class, 'id', 'platform_id');
+    }
+
+    public function getImage($image)
+    {
+        if (!$image) {
+            return '';
+        } else {
+            return   '/storage/'.$image->id.'/'.$image->file_name;
+        }
+    }
+
+    public function getSymbol($chain)
+    {
+        if (!$chain) {
+            return '';
+        } else {
+            return   $chain->symbol;
+        }
+    }
+
 }
