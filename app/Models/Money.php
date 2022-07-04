@@ -15,6 +15,10 @@ class Money extends Model   implements HasMedia
     use HasFactory;
     use InteractsWithMedia;
 
+    public const COIN_MARKET_CAP = 5;
+    public const COIN_GECKO = 6;
+    public const COIN_UNIVERSAL = 7;
+
     protected $fillable = [
         'name',
         'symbol',
@@ -63,6 +67,22 @@ class Money extends Model   implements HasMedia
             return '';
         } else {
             return   '/storage/'.$image->id.'/'.$image->file_name;
+        }
+    }
+
+    public function isCoinMarketCap($platform)
+    {
+        if ( !$platform ) return false;
+        if ( ($platform->id == Self::COIN_MARKET_CAP) || ($platform->id == Self::COIN_UNIVERSAL) ) {
+            return true;
+        }
+    }
+
+    public function isCoinGecko($platform)
+    {
+        if ( !$platform ) return false;
+        if ( ($platform->id == Self::COIN_GECKO) || ($platform->id == Self::COIN_UNIVERSAL) ) {
+            return true;
         }
     }
 
